@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+
+<!--
+  Morning Passport 募集LP
+  申込フォームURL設定済み：https://forms.gle/k2L5hfd6CF3peFx28
+-->
+
+<title>Morning Passport｜7月5日（日）あさ7:30・豊田</title>
+<meta name="description" content="久しぶりに、朝、身体を動かしませんか。運動が止まっていても大丈夫な、日曜あさ30分の集まり。SENTAN（豊田市）・無料・手ぶらでOK。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Morning Passport">
+<meta property="og:title" content="Morning Passport｜7月5日（日）あさ7:30・豊田">
+<meta property="og:description" content="久しぶりに、朝、身体を動かしませんか。運動が止まっていても大丈夫な、日曜あさ30分の集まり。SENTAN（豊田市）・無料・手ぶらでOK。">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#F6FAFE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='16'%20fill='%23E8F1F9'/%3E%3Ccircle%20cx='32'%20cy='34'%20r='11'%20fill='%23E8590C'%20opacity='.85'/%3E%3Cpath%20d='M12%2034h40'%20stroke='%231864AB'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;600;700&family=IBM+Plex+Sans:wght@400;600;700&family=Klee+One:wght@600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+:root {
+  /* ---- Color：夜明けの空 ---- */
+  --blue:      #1864AB;
+  --blue-deep: #0E3A66;
+  --blue-soft: #4A87BE;
+  --blue-pale: #E9F2FA;
+  --sky:       #F4F9FD;
+  --ink:       #1C2733;
+  --gray:      #5D6B7A;
+  --line:      #E1E9F0;
+  --bg:        #FFFFFF;
+  --bg-soft:   #F6F9FC;
+  --dawn:      #FFF6E8;   /* 夜明けの暖色。背景の裾にだけ使う */
+  --dawn-deep: #FFEDD2;
+  --sun:       #F8A62B;
+
+  /* ---- スパイス（用途限定） ---- */
+  --marker: rgba(255, 220, 84, .5);
+  --orange:      #E8590C;
+  --orange-ink:  #B4560E; /* 暖色地の上で読ませる時 */
+  --green:       #2B8A3E;
+
+  /* ---- Typography: 4つの「声」 ---- */
+  --font-head:  "Shippori Mincho", "Noto Serif JP", serif;   /* 見出し＝朝の声 */
+  --font-body:  "Noto Sans JP", system-ui, sans-serif;       /* 本文＝機能の声 */
+  --font-en:    "IBM Plex Sans", system-ui, sans-serif;      /* 数字・英字 */
+  --font-hand:  "Klee One", "Noto Sans JP", cursive;         /* 手書きの本音 */
+
+  /* ---- Spacing ---- */
+  --s1: 4px;  --s2: 8px;  --s3: 16px; --s4: 24px;
+  --s5: 40px; --s6: 64px; --s7: 96px; --s8: 128px;
+
+  /* ---- Radius / Shadow ---- */
+  --radius:    10px;
+  --radius-lg: 18px;
+  --border: 1px solid var(--line);
+  --shadow-soft: 0 18px 44px rgba(14, 58, 102, .09), 0 2px 8px rgba(14, 58, 102, .05);
+  --shadow-chip: 0 10px 26px rgba(14, 58, 102, .14);
+  --shadow-btn:  0 8px 22px rgba(20, 84, 143, .26);
+
+  /* ---- Layout ---- */
+  --maxw:      1120px;
+  --maxw-text: 720px;
+}
+
+/* ---- reset ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--bg);
+  font-feature-settings: "pkna" 1;
+}
+h1, h2, h3, .num { font-feature-settings: "palt" 1; }
+img { max-width: 100%; display: block; }
+a { color: var(--blue); text-underline-offset: 3px; }
+ul { list-style: none; }
+::selection { background: var(--marker); }
+
+/* ---- typography ---- */
+h1, h2 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: .02em;
+  color: var(--ink);
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+h1 { font-size: clamp(31px, 5.2vw, 52px); font-weight: 700; line-height: 1.45; }
+h2 { font-size: clamp(23px, 3.3vw, 33px); }
+h3 {
+  font-family: var(--font-body);
+  font-size: clamp(17px, 2vw, 20px); font-weight: 700; line-height: 1.55;
+  color: var(--ink); word-break: keep-all;
+}
+p  { font-size: 15.5px; line-height: 1.95; color: var(--ink); max-width: var(--maxw-text); }
+.row { display: block; word-break: keep-all; }
+
+/* ---- 朝日マーカー ---- */
+.mk { background: linear-gradient(transparent 64%, var(--marker) 64%); padding-bottom: .04em; }
+p .mk, li .mk, blockquote .mk { font-weight: 700; }
+
+/* ---- layout ---- */
+.container { max-width: var(--maxw); margin-inline: auto; padding-inline: 24px; }
+section { padding-block: var(--s6); position: relative; }
+@media (min-width: 1024px) { section { padding-block: var(--s7); } }
+
+/* ---- section label ---- */
+.eyebrow {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .05em;
+  color: var(--blue); margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: ""; width: 34px; height: 2px; flex: none;
+  background: linear-gradient(90deg, var(--sun), var(--blue));
+  border-radius: 2px;
+}
+.eyebrow .en { font-family: var(--font-en); font-weight: 700; letter-spacing: .18em; white-space: nowrap; }
+.sec-head { margin-bottom: var(--s5); }
+
+/* ---- badges ---- */
+.badges { display: flex; gap: var(--s2); flex-wrap: wrap; margin-bottom: var(--s4); }
+.badge {
+  font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  padding: 5px 14px; border-radius: 999px;
+  border: 1px solid rgba(24,100,171,.45); color: var(--blue-deep); background: rgba(255,255,255,.8);
+}
+.badge.fill { background: var(--blue-deep); border-color: var(--blue-deep); color: #fff; }
+
+/* ---- buttons ---- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--font-body); font-weight: 700; font-size: 15px;
+  padding: 14px 32px; border-radius: 999px; text-decoration: none;
+  border: 1.5px solid var(--blue-deep);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+}
+.btn .ar { font-family: var(--font-en); transition: transform .18s ease; }
+.btn:hover .ar { transform: translateX(4px); }
+.btn.primary {
+  background: linear-gradient(135deg, #17629F 0%, var(--blue-deep) 100%);
+  color: #fff; box-shadow: var(--shadow-btn);
+}
+.btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(20,84,143,.32); }
+.btn.ghost { background: rgba(255,255,255,.9); color: var(--blue-deep); border-color: rgba(24,100,171,.4); }
+.btn.ghost:hover { background: var(--blue-pale); transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--marker); outline-offset: 3px; }
+.btn:active { transform: translateY(0); }
+
+/* ---- 手書き一言注釈 ---- */
+.hand-note {
+  font-family: var(--font-hand);
+  font-size: 15px; line-height: 1.7; color: var(--blue-deep);
+  display: inline-flex; gap: 8px; align-items: baseline;
+  border: 1.5px dashed rgba(24,100,171,.5); border-radius: 14px;
+  padding: 10px 20px; background: rgba(255,255,255,.85);
+  transform: rotate(-.4deg);
+}
+.hand-note::before { content: "\261E"; flex: none; font-size: 16px; color: var(--orange); }
+
+/* ---- 30秒でわかる TL;DR ---- */
+.tldr {
+  position: relative;
+  background: #fff; border: var(--border); border-radius: var(--radius-lg);
+  padding: 24px 26px 20px; margin: var(--s5) 0 var(--s4);
+  max-width: var(--maxw-text);
+  box-shadow: 0 6px 20px rgba(14,58,102,.05);
+}
+.bg-soft-sec .tldr { background: #fff; }
+section:not(.bg-soft-sec) .tldr { background: var(--bg-soft); box-shadow: none; }
+.tldr .tag {
+  position: absolute; top: -12px; left: 20px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .05em;
+  color: #fff; background: linear-gradient(90deg, var(--blue), var(--blue-deep));
+  padding: 3px 14px; border-radius: 999px;
+}
+.tldr p { font-size: 14.5px; line-height: 1.85; margin: 0; max-width: none; }
+.tldr b { color: var(--blue-deep); font-weight: 700; }
+
+/* ===================== header ===================== */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.88);
+  backdrop-filter: saturate(1.5) blur(10px);
+  -webkit-backdrop-filter: saturate(1.5) blur(10px);
+  border-bottom: 1px solid rgba(225,233,240,.7);
+  transition: box-shadow .25s ease;
+}
+body.scrolled .site-header { box-shadow: 0 6px 22px rgba(14,58,102,.08); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 62px; }
+.brand { font-family: var(--font-en); font-weight: 700; font-size: 15.5px; letter-spacing: .1em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.brand::before {
+  content: ""; width: 18px; height: 18px; border-radius: 50%; flex: none;
+  background:
+    radial-gradient(circle at 50% 62%, var(--sun) 0 34%, transparent 36%),
+    linear-gradient(transparent 0 58%, var(--blue) 58% 66%, transparent 66%),
+    var(--blue-pale);
+}
+.brand span { color: var(--blue); }
+.site-header .btn { padding: 9px 20px; font-size: 13.5px; }
+.nav-link { display: none; }
+@media (min-width: 1024px) {
+  .site-header nav { display: flex; align-items: center; gap: var(--s5); }
+  .nav-link { display: inline; font-size: 13.5px; font-weight: 500; color: var(--ink); text-decoration: none; }
+  .nav-link:hover { color: var(--blue); }
+}
+
+/* ===================== hero ===================== */
+.hero {
+  padding-block: var(--s6);
+  background:
+    radial-gradient(120% 90% at 82% 108%, var(--dawn-deep) 0%, rgba(255,237,210,0) 55%),
+    linear-gradient(180deg, #FDFEFF 0%, var(--sky) 55%, var(--dawn) 100%);
+  border-bottom: var(--border);
+  overflow: hidden;
+}
+@media (min-width: 1024px) { .hero { padding-block: var(--s7); } }
+.hero-grid { display: grid; gap: var(--s6); align-items: center; }
+@media (min-width: 1024px) { .hero-grid { grid-template-columns: 1.05fr .95fr; gap: var(--s6); } }
+.hero .entag {
+  font-family: var(--font-en); font-size: 12.5px; font-weight: 700; letter-spacing: .2em;
+  color: var(--blue); margin: var(--s4) 0 8px;
+}
+.hero .sub { font-size: 16px; color: var(--gray); max-width: 34em; }
+.hero-cta { display: flex; align-items: center; gap: var(--s3); flex-wrap: wrap; margin-top: var(--s5); }
+.hero .micro { width: 100%; font-size: 12px; color: var(--gray); margin-top: 2px; }
+.hero .hand-note { margin-top: var(--s4); }
+
+/* ---- hero visual: 当日の朝カード ---- */
+.hero-visual { position: relative; max-width: 430px; margin-inline: auto; width: 100%; padding: var(--s4) 0 var(--s5); }
+.hero-visual .sun {
+  position: absolute; z-index: 0;
+  width: 360px; height: 360px; border-radius: 50%;
+  top: -60px; right: -70px;
+  background:
+    radial-gradient(closest-side, rgba(248,166,43,.34), rgba(248,166,43,0) 68%),
+    radial-gradient(closest-side, rgba(255,205,112,.5), rgba(255,205,112,0) 45%);
+  animation: sunGlow 7s ease-in-out infinite alternate;
+}
+@keyframes sunGlow {
+  from { transform: scale(1);    opacity: .85; }
+  to   { transform: scale(1.07); opacity: 1; }
+}
+.routine-card {
+  position: relative; z-index: 1;
+  background: #fff; border: var(--border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--s4);
+  overflow: hidden;
+}
+.routine-card::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+  background: linear-gradient(90deg, var(--sun), var(--orange) 35%, var(--blue) 100%);
+}
+.rc-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: var(--s3); border-bottom: var(--border); margin-bottom: var(--s2);
+}
+.rc-head .t { font-family: var(--font-en); font-size: 11px; font-weight: 700; letter-spacing: .18em; color: var(--blue); }
+.rc-head .time { font-family: var(--font-en); font-size: 13.5px; font-weight: 700; color: var(--ink); }
+.routine-card li {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 12px; border-radius: var(--radius);
+  font-size: 14px; font-weight: 500;
+}
+.routine-card li .no {
+  width: 23px; height: 23px; border-radius: 50%; flex: none;
+  background: var(--blue-pale); color: var(--blue-deep);
+  font-family: var(--font-en); font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.routine-card li .nm { flex: 1; }
+.routine-card li .reps { font-family: var(--font-en); font-size: 12.5px; color: var(--gray); }
+.routine-card li.now { background: linear-gradient(90deg, var(--blue-pale), rgba(233,242,250,.35)); }
+.routine-card li.now .no { background: var(--blue-deep); color: #fff; }
+.rc-foot { margin-top: var(--s2); padding-top: var(--s3); border-top: 1px dashed var(--line); font-size: 12.5px; color: var(--gray); }
+.rc-foot b { font-weight: 700; color: var(--ink); }
+
+/* ---- 日付スタンプ（パスポート風の判押し） ---- */
+.date-stamp {
+  position: absolute; z-index: 2; left: -14px; bottom: 12px;
+  width: 118px; height: 118px; border-radius: 50%;
+  background: rgba(255,255,255,.94);
+  border: 2px dashed rgba(232,89,12,.55);
+  box-shadow: var(--shadow-chip);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  text-align: center; transform: rotate(-7deg);
+}
+.date-stamp::before {
+  content: ""; position: absolute; inset: 5px; border-radius: 50%;
+  border: 1px solid rgba(232,89,12,.3);
+}
+.date-stamp .n { font-family: var(--font-en); font-size: 30px; font-weight: 700; color: var(--orange-ink); line-height: 1; }
+.date-stamp .l { font-size: 11px; font-weight: 700; color: var(--orange-ink); line-height: 1.4; }
+
+/* ===================== problem ===================== */
+.lead-q {
+  font-family: var(--font-head); font-weight: 600;
+  font-size: clamp(21px, 3vw, 30px); line-height: 1.9;
+  color: var(--ink); max-width: 24em; word-break: keep-all;
+}
+.voice-list { display: grid; gap: var(--s3); max-width: var(--maxw-text); margin-top: var(--s5); }
+.voice-list li {
+  padding: 15px 20px 15px 24px;
+  border-left: 3px solid var(--blue);
+  background: var(--bg-soft); border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-size: 15px; line-height: 1.8;
+}
+.problem .turn { margin-top: var(--s5); font-size: 16px; }
+
+/* ===================== how (compare + timeline) ===================== */
+.how { background: linear-gradient(180deg, var(--bg-soft) 0%, #FBFCFE 100%); border-block: var(--border); }
+.compare { display: grid; gap: var(--s3); margin: var(--s5) 0; max-width: var(--maxw-text); }
+@media (min-width: 768px) { .compare { grid-template-columns: 1fr 1fr; } }
+.compare .cell { border: var(--border); border-radius: var(--radius-lg); padding: 22px 24px; background: #fff; }
+.compare .cell.hl {
+  border: 1.5px solid rgba(24,100,171,.5);
+  background: linear-gradient(160deg, var(--blue-pale) 0%, #F3F9FE 100%);
+  box-shadow: 0 10px 28px rgba(14,58,102,.08);
+}
+.compare .ttl { font-weight: 700; font-size: 15px; margin-bottom: var(--s2); }
+.compare .ttl .small { display: block; font-size: 12px; color: var(--gray); font-weight: 500; }
+.compare .hl .ttl .small { font-family: var(--font-en); letter-spacing: .04em; color: var(--blue); }
+.compare li { font-size: 14px; line-height: 1.85; padding-left: 22px; position: relative; }
+.compare li::before { content: "–"; position: absolute; left: 3px; color: var(--gray); }
+.compare .hl li::before { content: "\2713"; color: var(--blue-deep); font-weight: 700; font-family: var(--font-en); }
+
+.timeline { max-width: var(--maxw-text); margin-top: var(--s6); }
+.t-item { display: grid; grid-template-columns: 88px 1fr; gap: var(--s4); position: relative; padding-bottom: var(--s6); }
+.t-item:last-child { padding-bottom: 0; }
+.t-item::before {
+  content: ""; position: absolute; left: 43px; top: 38px; bottom: -4px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(24,100,171,.28), var(--line));
+}
+.t-item:last-child::before { display: none; }
+.t-time {
+  font-family: var(--font-en); font-weight: 700; font-size: 13.5px;
+  color: var(--blue-deep); background: #fff;
+  border: 1.5px solid rgba(24,100,171,.4);
+  border-radius: 999px; padding: 6px 0; text-align: center;
+  height: fit-content; position: relative; z-index: 1;
+  box-shadow: 0 4px 12px rgba(14,58,102,.08);
+}
+.t-body h3 { margin-bottom: var(--s2); }
+.t-body p { font-size: 15px; }
+.expect {
+  display: inline-block; font-size: 13px; font-weight: 500; color: var(--orange-ink);
+  background: var(--dawn); border: 1px solid rgba(232,89,12,.18);
+  border-radius: 999px;
+  padding: 7px 16px; margin-top: var(--s3);
+}
+@media (max-width: 767px) {
+  .t-item { grid-template-columns: 64px 1fr; gap: var(--s3); }
+  .t-item::before { left: 31px; }
+}
+
+/* ===================== info: 淡青バンド ===================== */
+.proof {
+  background:
+    radial-gradient(90% 70% at 8% 110%, rgba(255,237,210,.55) 0%, rgba(255,237,210,0) 60%),
+    var(--blue-pale);
+  border-block: var(--border);
+}
+.proof .band-sub { color: var(--gray); font-size: 14.5px; margin-top: var(--s3); }
+.metrics { display: grid; gap: var(--s5); margin-top: var(--s6); }
+@media (min-width: 768px) { .metrics { grid-template-columns: repeat(3, 1fr); } }
+.metric { background: rgba(255,255,255,.72); border: var(--border); border-radius: var(--radius-lg); padding: 22px 24px 20px; }
+.metric .label { font-size: 13px; font-weight: 700; color: var(--gray); margin-bottom: var(--s2); }
+.metric .mrow { display: flex; align-items: baseline; gap: 12px; font-family: var(--font-en); }
+.metric .after { font-size: 54px; font-weight: 700; color: var(--blue-deep); line-height: 1; letter-spacing: -.01em; }
+@media (min-width: 1024px) { .metric .after { font-size: 64px; } }
+.metric .after .unit { font-size: 19px; font-weight: 700; margin-left: 2px; }
+.metric .note { font-size: 12.5px; color: var(--gray); margin-top: var(--s3); padding-top: var(--s2); border-top: 1px dashed var(--line); }
+
+/* ---- 会場カード ---- */
+.place-card {
+  background: #fff; border: var(--border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: var(--s4) var(--s4); margin-top: var(--s6);
+  display: grid; gap: var(--s3); align-items: center;
+  position: relative; overflow: hidden;
+}
+.place-card::before {
+  content: ""; position: absolute; inset: 0 auto 0 0; width: 4px;
+  background: linear-gradient(180deg, var(--sun), var(--blue));
+}
+@media (min-width: 768px) { .place-card { grid-template-columns: 1fr auto; gap: var(--s4); padding-inline: 28px; } }
+.place-card .pc-label { font-family: var(--font-en); font-size: 11px; font-weight: 700; letter-spacing: .18em; color: var(--blue); margin-bottom: var(--s1); }
+.place-card .pc-name { font-size: clamp(18px, 2.4vw, 23px); font-weight: 900; line-height: 1.5; font-family: var(--font-body); }
+.place-card .pc-addr { font-size: 14px; color: var(--gray); margin-top: var(--s1); max-width: none; }
+.place-card .badges { margin: var(--s3) 0 0; }
+
+/* ===================== voice: 明朝の引用 ===================== */
+.pull-quote { position: relative; max-width: var(--maxw-text); margin-top: var(--s5); }
+.pull-quote::before {
+  content: "\201C";
+  font-family: var(--font-head); font-size: 130px; line-height: 1;
+  color: var(--blue-pale); position: absolute; top: -40px; left: -14px; z-index: 0;
+}
+.pull-quote blockquote {
+  position: relative; z-index: 1;
+  font-family: var(--font-head); font-weight: 600;
+  font-size: clamp(18px, 2.4vw, 24px); line-height: 2.15; color: var(--ink);
+  word-break: keep-all;
+}
+.pull-quote .who { display: flex; align-items: center; gap: var(--s3); margin-top: var(--s5); padding-top: var(--s4); border-top: 1px dashed var(--line); }
+.pull-quote .avatar {
+  width: 50px; height: 50px; border-radius: 50%; flex: none;
+  background: linear-gradient(150deg, var(--dawn-deep), var(--blue-pale));
+  color: var(--blue-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head); font-weight: 700; font-size: 19px;
+}
+.pull-quote .who div { font-size: 13.5px; line-height: 1.6; }
+.pull-quote .who strong { font-weight: 700; }
+.pull-quote .who span { color: var(--gray); }
+
+/* ===================== mid CTA ===================== */
+.midcta {
+  background: linear-gradient(180deg, var(--blue-pale) 0%, #F1F7FC 100%);
+  border-block: var(--border);
+  text-align: center; padding-block: var(--s6);
+}
+.midcta h2 { font-size: clamp(21px, 3vw, 29px); margin-bottom: var(--s4); }
+.midcta .micro { font-size: 12.5px; color: var(--gray); margin-top: var(--s3); max-width: none; }
+
+/* ===================== fit ===================== */
+.fit-grid { display: grid; gap: var(--s5); max-width: var(--maxw-text); margin-top: var(--s5); }
+@media (min-width: 768px) { .fit-grid { grid-template-columns: 1fr 1fr; gap: var(--s6); } }
+.checklist { margin-top: var(--s3); }
+.checklist li {
+  padding: 11px 0 11px 34px; position: relative;
+  font-size: 14.5px; line-height: 1.7; border-bottom: 1px dashed var(--line);
+}
+.checklist li::before {
+  content: "\2713"; position: absolute; left: 0; top: 12px;
+  width: 21px; height: 21px; border-radius: 50%;
+  background: #E7F4EB; color: var(--green);
+  font-family: var(--font-en); font-weight: 700; font-size: 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.checklist.ng li::before { content: "\00D7"; background: #FCEEE3; color: var(--orange-ink); font-size: 14px; }
+
+/* ===================== faq ===================== */
+.faq-list {
+  max-width: var(--maxw-text); margin-top: var(--s5);
+  background: #fff; border: var(--border); border-radius: var(--radius-lg);
+  padding: 4px 24px; box-shadow: 0 6px 20px rgba(14,58,102,.05);
+}
+.faq-item { border-bottom: var(--border); }
+.faq-item:last-child { border-bottom: none; }
+.faq-item summary {
+  font-weight: 700; font-size: 15.5px; color: var(--ink);
+  cursor: pointer; list-style: none;
+  display: flex; justify-content: space-between; align-items: baseline; gap: var(--s4);
+  padding: 19px 4px;
+  transition: color .15s ease;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--blue); }
+.faq-item summary::before { content: "Q."; font-family: var(--font-en); color: var(--orange); font-weight: 700; margin-right: 2px; flex: none; }
+.faq-item summary .q { flex: 1; }
+.faq-item summary::after {
+  content: "+"; color: var(--blue); font-family: var(--font-en); font-size: 22px; line-height: 1; flex: none;
+  transition: transform .25s ease; transform-origin: center;
+}
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .a { padding: 0 4px 19px 28px; font-size: 14.5px; color: var(--gray); line-height: 1.9; max-width: none; }
+.faq-item .a::before { content: "A. "; font-family: var(--font-en); color: var(--blue); font-weight: 700; }
+
+/* ===================== final ===================== */
+.final {
+  text-align: center; padding-block: var(--s7);
+  background: linear-gradient(180deg, #F8FBFE 0%, var(--dawn) 78%, var(--dawn-deep) 100%);
+  overflow: hidden;
+}
+@media (min-width: 1024px) { .final { padding-block: var(--s8); } }
+.final::before {
+  content: ""; position: absolute; left: 50%; bottom: -140px; transform: translateX(-50%);
+  width: 520px; height: 520px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(248,166,43,.28), rgba(248,166,43,0) 70%);
+  pointer-events: none;
+}
+.final .container { position: relative; z-index: 1; }
+.final .entag { font-family: var(--font-en); font-size: 12.5px; font-weight: 700; letter-spacing: .2em; color: var(--blue); margin-bottom: var(--s4); }
+.final h2 {
+  font-size: clamp(22px, 3.2vw, 32px); line-height: 2;
+  max-width: 24em; margin: 0 auto var(--s5);
+}
+.final .btn { font-size: 16px; padding: 17px 44px; }
+.final .hand-note { margin-top: var(--s5); }
+.final .sub { font-size: 12.5px; color: var(--gray); margin-top: var(--s4); max-width: none; }
+.final .contact { font-size: 14px; color: var(--gray); margin-top: var(--s4); max-width: none; }
+.final .contact a { color: var(--blue-deep); font-weight: 700; }
+
+/* ===================== footer ===================== */
+.site-footer { background: var(--bg-soft); border-top: var(--border); padding-block: var(--s6) var(--s5); }
+.site-footer .container { display: flex; flex-direction: column; gap: var(--s2); }
+.site-footer .tagline { font-size: 13px; color: var(--gray); }
+.site-footer .copy { font-size: 12px; color: var(--gray); margin-top: var(--s3); }
+
+/* ===================== mobile CTA bar ===================== */
+.mobile-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  background: rgba(255,255,255,.95); backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: var(--border);
+  box-shadow: 0 -8px 24px rgba(14,58,102,.08);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  display: none; align-items: center; gap: 12px;
+  transform: translateY(110%);
+  transition: transform .3s ease;
+}
+.mobile-cta .t { font-size: 12.5px; font-weight: 700; line-height: 1.45; flex: 1; }
+.mobile-cta .t small { display: block; font-weight: 400; color: var(--gray); font-size: 11px; }
+.mobile-cta .btn { padding: 11px 22px; font-size: 13.5px; flex: none; }
+@media (max-width: 1023px) {
+  .mobile-cta { display: flex; }
+  body.cta-on:not(.at-final) .mobile-cta { transform: none; }
+}
+
+/* ---- reveal（JS有効時のみ隠す。JS無効でも全文表示される） ---- */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .mobile-cta { transition: none; }
+  .hero-visual .sun { animation: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#">MORNING <span>PASSPORT</span></a>
+    <nav>
+      <a class="nav-link" href="#foryou">こんな方へ</a>
+      <a class="nav-link" href="#how">当日やること</a>
+      <a class="nav-link" href="#info">開催情報</a>
+      <a class="btn primary" href="https://forms.gle/k2L5hfd6CF3peFx28">参加を申し込む</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badges">
+          <span class="badge fill">7月5日（日）あさ7:30</span>
+          <span class="badge">参加無料</span>
+          <span class="badge">手ぶらでOK</span>
+        </div>
+        <h1>
+          <span class="row">久しぶりに、<span class="mk">朝、</span></span>
+          <span class="row">身体を動かしませんか。</span>
+        </h1>
+        <div class="entag">MORNING PASSPORT ─ SUNDAY MORNING, TOYOTA</div>
+        <p class="sub">運動、しばらくできていなくても大丈夫。日曜のあさ、SENTAN（豊田市）でゆるく身体を動かして、気持ちよく一日を始めます。</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="https://forms.gle/k2L5hfd6CF3peFx28">参加を申し込む<span class="ar">→</span></a>
+          <a class="btn ghost" href="#info">開催情報を見る</a>
+          <span class="micro">参加無料・入力1分／当日ふらっと来ても大丈夫です</span>
+        </div>
+        <p class="hand-note">気合いは要りません。目が覚めるくらいで、ちょうどいい朝です。</p>
+      </div>
+      <div class="hero-visual">
+        <div class="sun" aria-hidden="true"></div>
+        <div class="routine-card" aria-label="当日の朝の流れ">
+          <div class="rc-head">
+            <span class="t">SUNDAY MORNING</span>
+            <span class="time">7:30 – 8:00ごろ</span>
+          </div>
+          <ul>
+            <li><span class="no">1</span><span class="nm">あつまる</span><span class="reps">7:30</span></li>
+            <li class="now"><span class="no">2</span><span class="nm">ストレッチ</span><span class="reps">ゆっくり</span></li>
+            <li><span class="no">3</span><span class="nm">軽い運動</span><span class="reps">じぶんのペース</span></li>
+            <li><span class="no">4</span><span class="nm">深呼吸して、解散</span><span class="reps">8:00ごろ</span></li>
+          </ul>
+          <div class="rc-foot">終わったら<b>その場で解散</b>。日曜がまるごと残ります</div>
+        </div>
+        <div class="date-stamp" aria-label="7月5日 日曜日 あさ7時30分">
+          <span class="n">7/5</span><span class="l">（日）<br>あさ7:30</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 01 こんな方へ ===== -->
+  <section id="foryou" class="problem">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="en">01 ─ FOR YOU</span>こんな方へ</p>
+        <p class="lead-q">「運動しなきゃ」と思ったまま、<br>しばらく経っていませんか。</p>
+      </div>
+      <div class="tldr reveal">
+        <span class="tag">30秒でわかる</span>
+        <p>Morning Passportは、<b>運動がしばらく止まっている人のための、日曜あさ30分の集まり</b>です。きついことはしません。無料で、手ぶらで来られます。</p>
+      </div>
+      <ul class="voice-list reveal">
+        <li>運動しなきゃと思いながら、しばらく経ってしまった。</li>
+        <li>一人だと、なかなか始められない。</li>
+        <li>久しぶりすぎて、ジムはちょっと気が重い。</li>
+        <li>日曜の朝を、気持ちよく始めたい。</li>
+      </ul>
+      <p class="turn reveal">どれか一つでも当てはまったら、<span class="mk">ぴったりの朝</span>です。</p>
+    </div>
+  </section>
+
+  <!-- ===== 02 当日やること ===== -->
+  <section id="how" class="how bg-soft-sec">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="en">02 ─ ON THE DAY</span>当日やること</p>
+        <h2>体力を試す場ではなく、朝の空気に<span class="mk">身体を戻す</span>時間。</h2>
+      </div>
+      <div class="tldr reveal">
+        <span class="tag">30秒でわかる</span>
+        <p>やることは3つだけ。<b>集まって、ゆるく動いて、その場で解散</b>。途中参加・途中離脱も自由です。</p>
+      </div>
+
+      <div class="compare reveal">
+        <div class="cell">
+          <div class="ttl">気合いの要る運動<span class="small">ジム・ランニングなど</span></div>
+          <ul>
+            <li>始める前の決心が、いちばん重い</li>
+            <li>久しぶりだと、ついていけるか不安</li>
+            <li>道具や会費の準備から始まる</li>
+          </ul>
+        </div>
+        <div class="cell hl">
+          <div class="ttl">この朝<span class="small">Morning Passport</span></div>
+          <ul>
+            <li>決めるのは「行く」だけ。あとは流れるだけ</li>
+            <li>内容は目が覚めるくらいのゆるさ</li>
+            <li>無料・手ぶら。動きやすい服装だけでOK</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-time">7:30</div>
+          <div class="t-body">
+            <h3>あつまる。あいさつだけで、すぐ始めます。</h3>
+            <p>受付の列も自己紹介タイムもありません。着いた人から、朝の空気の中へ。少し遅れてきても大丈夫です。</p>
+            <span class="expect">うまくいくと → 着いて1分で、もう始まっている</span>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">7:35</div>
+          <div class="t-body">
+            <h3>ストレッチと、軽い運動。</h3>
+            <p>目が覚めていくくらいのゆるい内容から始めます。まわりに合わせる必要はありません。自分のペースで、休みながらで大丈夫です。</p>
+            <span class="expect">うまくいくと → 「これならできる」のまま最後まで</span>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">8:00</div>
+          <div class="t-body">
+            <h3>深呼吸して、その場で解散。</h3>
+            <p>打ち上げも連絡先の交換もありません。8時すぎ、日曜がまるごと残っている時間に、気持ちよく終わります。予定の前にも来やすい朝です。</p>
+            <span class="expect">うまくいくと → いつもの日曜が、少し長く感じる</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 03 開催情報（淡青バンド） ===== -->
+  <section id="info" class="proof">
+    <div class="container">
+      <div class="sec-head reveal" style="margin-bottom:0">
+        <p class="eyebrow"><span class="en">03 ─ INFORMATION</span>開催情報</p>
+        <h2>覚えることは、日時と場所だけ。</h2>
+        <p class="band-sub">雨天決行です。雨の日も、そのまま開催します。</p>
+      </div>
+      <div class="metrics reveal">
+        <div class="metric">
+          <div class="label">日付</div>
+          <div class="mrow">
+            <span class="after">7/5<span class="unit">（日）</span></span>
+          </div>
+          <div class="note">2026年7月5日・日曜日</div>
+        </div>
+        <div class="metric">
+          <div class="label">時間</div>
+          <div class="mrow">
+            <span class="after">7:30<span class="unit">〜8:00ごろ</span></span>
+          </div>
+          <div class="note">途中参加・途中離脱も自由</div>
+        </div>
+        <div class="metric">
+          <div class="label">参加費</div>
+          <div class="mrow">
+            <span class="after">¥0<span class="unit">無料</span></span>
+          </div>
+          <div class="note">持ち物なし・動きやすい服装で</div>
+        </div>
+      </div>
+      <div class="place-card reveal">
+        <div>
+          <div class="pc-label">PLACE</div>
+          <div class="pc-name">ものづくり創造拠点 SENTAN</div>
+          <p class="pc-addr">〒471-0023 愛知県豊田市挙母町2-1-1</p>
+          <div class="badges">
+            <span class="badge">駐車場あり</span>
+            <span class="badge">参加無料</span>
+            <span class="badge">手ぶらでOK</span>
+            <span class="badge">雨天決行</span>
+          </div>
+        </div>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%E6%84%9B%E7%9F%A5%E7%9C%8C%E8%B1%8A%E7%94%B0%E5%B8%82%E6%8C%99%E6%AF%8D%E7%94%BA2-1-1" target="_blank" rel="noopener">地図を開く<span class="ar">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 04 主催より ===== -->
+  <section class="voice">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="en">04 ─ FROM THE ORGANIZER</span>主催より</p>
+      </div>
+      <div class="pull-quote reveal">
+        <blockquote>がんばるための場所は、世の中にもうたくさんあります。この朝は、<span class="mk">戻ってくるための場所</span>。久しぶりの方が、いちばんの主役です。そして、この朝は一回きりでは終わりません。<span class="mk">これから続いていく、朝の集まりの第1回</span>です。気に入ったら、また来てください。それだけで十分です。</blockquote>
+        <div class="who">
+          <div class="avatar">朝</div>
+          <div>
+            <strong>ASABU</strong><br>
+            <span>有志による朝の活動／Startup Weekend 豊田の活動の一環</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== mid CTA ===== -->
+  <section class="midcta">
+    <div class="container reveal">
+      <h2>考えるのは、日曜の朝でいい。</h2>
+      <a class="btn primary" href="https://forms.gle/k2L5hfd6CF3peFx28">参加を申し込む<span class="ar">→</span></a>
+      <p class="micro">参加無料・入力1分／当日ふらっと来ても大丈夫です</p>
+    </div>
+  </section>
+
+  <!-- ===== 05 向き・不向き ===== -->
+  <section class="fit-section">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="en">05 ─ IS IT FOR YOU?</span>正直なところ</p>
+        <h2>合いそうな朝かどうか、先にどうぞ。</h2>
+      </div>
+      <div class="fit-grid reveal">
+        <div class="fit">
+          <h3>こんな方に向いています</h3>
+          <ul class="checklist">
+            <li>運動を再開する、小さなきっかけがほしい</li>
+            <li>一人で始めるのは、腰が重い</li>
+            <li>まずは軽い内容から身体を戻したい</li>
+            <li>日曜の午前を気持ちよく使いたい</li>
+          </ul>
+        </div>
+        <div class="fit">
+          <h3>物足りないかもしれない方</h3>
+          <ul class="checklist ng">
+            <li>しっかり汗をかいて追い込みたい</li>
+            <li>トレーニングの強度やメニューを求めている</li>
+            <li>記録やタイムを伸ばす場を探している</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 06 Q&A ===== -->
+  <section class="faq">
+    <div class="container">
+      <div class="sec-head reveal">
+        <p class="eyebrow"><span class="en">06 ─ Q&amp;A</span>小さなQ&amp;A</p>
+        <h2>よくいただく質問に、先に答えておきます。</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary><span class="q">運動が久しぶりでも平気ですか？</span></summary>
+          <p class="a">そのための朝です。目が覚めるくらいの軽い内容だけなので、久しぶりの方こそ、ちょうどよく参加できます。</p>
+        </details>
+        <details class="faq-item" open>
+          <summary><span class="q">一人で行っても浮きませんか？</span></summary>
+          <p class="a">ほとんどの方が一人での参加です。無理に話す必要もないので、そのままお越しください。</p>
+        </details>
+        <details class="faq-item" open>
+          <summary><span class="q">何を持っていけばいいですか？</span></summary>
+          <p class="a">手ぶらでOKです。動きやすい服装だけでお越しください。</p>
+        </details>
+        <details class="faq-item" open>
+          <summary><span class="q">当日、行けなくなったらどうすれば？</span></summary>
+          <p class="a">そのままで大丈夫です。来られない方は、朝にLINEで一緒にやる参加もできます（申込フォームで選べます）。雨の日もそのまま開催します（雨天決行）。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Final CTA ===== -->
+  <section id="final" class="final">
+    <div class="container">
+      <div class="entag reveal">SEE YOU ON SUNDAY MORNING</div>
+      <h2 class="reveal">朝で、待っています。<br>当日ふらっと来ても、大丈夫です。</h2>
+      <a class="btn primary reveal" href="https://forms.gle/k2L5hfd6CF3peFx28">参加を申し込む<span class="ar">→</span></a>
+      <div class="reveal"><p class="hand-note">申込は1分。あとは日曜の朝、起きるだけです。</p></div>
+      <p class="sub reveal">来られない方は、朝にLINEで一緒にやる参加もできます（フォームで選べます）。</p>
+      <p class="contact reveal">お問い合わせ：<a href="tel:09091742559">090-9174-2559</a>／<a href="mailto:masatoshikako0701@gmail.com">masatoshikako0701@gmail.com</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <a class="brand" href="#">MORNING <span>PASSPORT</span></a>
+    <p class="tagline">このイベントは、起業体験イベント『Startup Weekend 豊田（スタートアップウィークエンド豊田）』の活動の一環として開催します。</p>
+    <p class="tagline">主催：ASABU（有志による朝の活動）</p>
+    <p class="tagline">参加は無料です。勧誘などはありません。</p>
+    <p class="copy">© 2026 MORNING PASSPORT</p>
+  </div>
+</footer>
+
+<!-- ===== mobile sticky CTA ===== -->
+<div class="mobile-cta" aria-hidden="true">
+  <div class="t">7月5日（日）あさ7:30・SENTAN<small>参加無料・手ぶらでOK</small></div>
+  <a class="btn primary" href="https://forms.gle/k2L5hfd6CF3peFx28">申し込む</a>
+</div>
+
+<script>
+(() => {
+  // reveal（少しだけ時差をつけて、朝が明けるように）
+  const io = new IntersectionObserver((entries) => {
+    let i = 0;
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.style.transitionDelay = (i++ * 70) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // header shadow + mobile CTA
+  const onScroll = () => {
+    document.body.classList.toggle('scrolled', scrollY > 8);
+    document.body.classList.toggle('cta-on', scrollY > 600);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const fin = document.getElementById('final');
+  if (fin) {
+    const fio = new IntersectionObserver((entries) => {
+      for (const e of entries) document.body.classList.toggle('at-final', e.isIntersecting);
+    }, { threshold: 0.15 });
+    fio.observe(fin);
+  }
+})();
+</script>
+
+</body>
+</html>
